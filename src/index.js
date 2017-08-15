@@ -1,8 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {Provider} from 'react-redux'
+import Search from './search'
+import Results from './results'
+import store from './store'
+import './app.css'
+// import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+let Root = () => (
+    <Provider store={store}>
+        <Router>
+            <Switch>              
+                <Route exact path="/" render={ () => <Search/> }/>
+                <Route exact path="/results" render={ () => <Results/> }/>
+            </Switch>   
+        </Router>
+    </Provider>         
+)
+
+
+ReactDOM.render(<Root />, document.getElementById('root'));
+// registerServiceWorker();
