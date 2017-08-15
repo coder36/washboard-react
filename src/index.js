@@ -5,7 +5,7 @@ import {Provider} from 'react-redux'
 import Search from './search'
 import Results from './results'
 import store from './store'
-import './app.css'
+import './search.css'
 // import registerServiceWorker from './registerServiceWorker';
 
 

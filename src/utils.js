@@ -1,7 +1,3 @@
-import React from 'react'
-import store from './store'
-
-
 function loadData(url, method, postPayload, auth_token) {    
     const options = {
         headers: {
